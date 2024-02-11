@@ -1,4 +1,5 @@
-// Домашня робота
+// Домашня робота (Модуль №21)
+
 //***1***
 // Робота зі змінними
 // Оголосіть дві змінні: name та city.
@@ -8,28 +9,30 @@
 // повинна показати “Іван”).
 
 // let name = "Іван";
-// let city="Kyiv";
+// let city = "Kyiv";
 // city = name;
 // console.log(name);
 //---------------------------------------------------------------------------------------------//
 
 //****2***
 //Який буде результат виконання скрипта?
-// let name = "Olga";
-// console.log(`привіт ${1}`); // привіт 1
-// console.log(`привіт ${"name"}`); // привіт name
-// console.log(`привіт ${name}`); // привіт Olga
+//let name = "Olga";
+//console.log(`привіт ${1}`); // привіт 1
+//console.log(`привіт ${"name"}`); // привіт name
+//console.log(`привіт ${name}`); // привіт Olga
 
 //---------------------------------------------------------------------------------------------//
 
 //***3***
 //Видобути число зі змінних
-// let a = "5";
+// вивести в консоль тип
+
+//let a = "5";
 // let b = "13cvb";
 // let c = "12.9sxdcfgv";
 // вивести в консоль тип
 
-// console.log(typeof Number(a));
+//console.log(typeof Number(a));
 // console.log(typeof Number.parseInt("b"));
 // console.log(typeof Number.parseFloat("c"));
 
@@ -39,19 +42,12 @@
 //Зробіть, щоб 0.1 + 0.2 = 0.3
 
 // console.log((0.1 * 10 + 0.2 * 10) / 10);
-//або ж так
-// let num = 0.1 + 0.2;
-// let fixedNum = num.toFixed(1);
-// console.log(fixedNum);
 
 //---------------------------------------------------------------------------------------------//
 
 //***5**
 //Поверніть найбільше число з набору 20, 10, 50, 40
-// let numbers = [20, 10, 50, 40];
-// let maxNumber = Math.max(...numbers);
-// console.log(maxNumber);
-//або ж так
+
 // console.log(Math.max(20, 10, 50, 40));
 
 //---------------------------------------------------------------------------------------------//
@@ -60,7 +56,7 @@
 
 // let random_number = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
 // console.log(random_number);
-//або ж так
+// //або ж так
 // console.log(Math.random(4 - 2 + 1) + 2);
 
 //---------------------------------------------------------------------------------------------//
@@ -68,9 +64,9 @@
 //***7**
 //дізнатись довжину message
 // const message = "Welcome to Bahamas!";
-// console.log(message.length); 19
+// console.log(message.length);// 19
 //або ж так
-// console.log("Welcome to Bahamas!".length); 19
+// console.log("Welcome to Bahamas!".length);// 19
 
 //---------------------------------------------------------------------------------------------//
 
@@ -108,9 +104,12 @@
 // user.name = "Alex";
 // user.age = 34;
 // user.city = "Budapest";
+// delete user.city;
+// user["like flowers"] = true;
 
 // for (let key in user) {
-//   console.log(key + ": " + user[key]);
+//     console.log(key);
+//     console.log(user[key]);
 // }
 
 //---------------------------------------------------------------------------------------------//
