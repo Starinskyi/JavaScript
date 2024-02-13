@@ -25,14 +25,18 @@
 
 //***3***
 //Видобути число зі змінних
-// вивести в консоль тип
 
-//let a = "5";
+// let a = "5";
 // let b = "13cvb";
 // let c = "12.9sxdcfgv";
+
+// console.log(Number(a));
+// console.log(Number.parseInt(b));
+// console.log(Number.parseFloat(c));
+
 // вивести в консоль тип
 
-//console.log(typeof Number(a));
+// console.log(typeof Number(a));
 // console.log(typeof Number.parseInt("b"));
 // console.log(typeof Number.parseFloat("c"));
 
@@ -113,3 +117,157 @@
 // }
 
 //---------------------------------------------------------------------------------------------//
+
+//Домашнє завдання (Модуль №22).
+
+// -- 1 --
+//Якщо змінна більше нуля - виведіть true, менше - false
+//Перевірте це на варіантах 1, 0, -3.
+
+// const test = 1;
+// if (test > 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// } //true
+
+// const test = 0;
+// if (test > 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }  //false
+
+// const test = -3;
+// if (test > 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// } //false
+
+//---------------------------------------------------------------------------------------------//
+
+// -- 2 --
+// Якщо змінна ="test" - виведіть true,
+//Перевірте це на варіантах:  'test',"qwerty",true
+
+// const test = "test";
+// if (test === "test") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }; //true
+
+// const test = "test";
+// if (test === "qwerty") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// };  //false
+
+// const test = "test";
+// if (test === true) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }; //false
+
+//---------------------------------------------------------------------------------------------//
+
+// -- 3 --
+// Якщо змінна більше 10 - відніміть 5,менше - додайте 5, результат виведіть в консоль
+//Перевірте це на варіантах 1, 10, 13.
+
+// const number = 1;
+// if (number > 10) {
+//   const test = number - 5;
+//   console.log(test);
+// } else {
+//   const test = number + 5;
+//   console.log(test);
+// }  //6
+
+// const number = 10;
+// if (number > 10) {
+//   const test = number - 5;
+//   console.log(test);
+// } else {
+//   const test = number + 5;
+//   console.log(test);
+// };  //15
+
+// const number = 13;
+// if (number > 10) {
+//   const test = number - 5;
+//   console.log(test);
+// } else {
+//   const test = number + 5;
+//   console.log(test);
+// };  //8
+
+//---------------------------------------------------------------------------------------------//
+// -- 4 --
+//Зробіть сервіс який отримує число від 1 до 12
+// виведіть місяць який дорівнює числу
+
+// const num = parseInt(prompt("Введіть число"));
+// let cost;
+
+// switch (num) {
+//   case 1:
+//     cost = "Січень";
+//     break;
+//   case 2:
+//     cost = "Лютий";
+//     break;
+//   case 3:
+//     cost = "Березень";
+//     break;
+//   case 4:
+//     cost = "Квітень";
+//     break;
+//   case 5:
+//     cost = "Травень";
+//     break;
+//   case 6:
+//     cost = "Червень";
+//     break;
+//   case 7:
+//     cost = "Липень";
+//     break;
+//   case 8:
+//     cost = "Серпень";
+//     break;
+//   case 9:
+//     cost = "Вересень";
+//     break;
+//   case 10:
+//     cost = "Жовтень";
+//     break;
+//   case 11:
+//     cost = "Листопад";
+//     break;
+//   case 12:
+//     cost = "Грудень";
+//     break;
+// }
+// console.log(cost);
+
+//---------------------------------------------------------------------------------------------//
+
+// -- 5 --
+//Зробіть сервіс який отримує тризначне число
+//Поверніть користувачу сумму цих чисел
+
+// const number = parseInt(prompt("Введіть трицифрове число"));
+
+// if (number >= 100 && number <= 999 && Number.isInteger(number)) {
+//   const num1 = Math.floor(number / 100); //
+//   const num2 = Math.floor((number / 10) % 10);
+//   const num3 = number % 10;
+
+//   const sumOfNumbers = num1 + num2 + num3;
+//   console.log(sumOfNumbers);
+// } else {
+//   console.log("Будь ласка, введіть тільки трицифрове ціле число.");
+// }
