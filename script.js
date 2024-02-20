@@ -71,10 +71,10 @@
 //   { age: 20, name: "Катя" },
 // ];
 
-// let sum = 0;
-// for (let i = 0; i < girls.length; i++) {
-//   sum += girls[i].age;
-// }
-// let averageAge = sum / girls.length;
-// console.log(averageAge);
+//const ages = girls.map((girl) => girl.age);
+
+//const totalAge = ages.reduce((sum, age) => sum + age, 0);
+//const averageAge = totalAge / girls.length;
+
+//console.log("Середній вік дівчат:", averageAge); //Середній вік дівчат: 20.5
 //---------------------------------------------------------------------------------------------//
