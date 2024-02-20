@@ -10,8 +10,8 @@
 // { id: 3, name: "Orange" },
 // ];
 
-// let fruts = ["Apple", "Tomat", "Cherry", "Orange"];
-// console.log(fruts);
+//const frutNames = fruts.map(frut => frut.name);
+//console.log(frutNames); // ["Apple", "Tomat", "Cherry", "Orange"]
 
 //---------------------------------------------------------------------------------------------//
 
