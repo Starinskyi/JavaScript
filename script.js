@@ -1,80 +1,196 @@
-//Домашнє завдання (Модуль №23. Mасиви i цикли)
+// Домашнє завдання (Модуль №25. Замикання,this)
 
-// -- 1 --
-// У вас є масив об’єктів fruts, і в кожному з них є name
-// Напишіть код, який перетворює їх в масив імен.
-// const fruts = [
-// { id: 0, name: "Apple" },
-// { id: 1, name: "Tomat" },
-// { id: 2, name: "Cherry" },
-// { id: 3, name: "Orange" },
-// ];
+// --1--
 
-//const frutNames = fruts.map(frut => frut.name);
-//console.log(frutNames); // ["Apple", "Tomat", "Cherry", "Orange"]
+// 1) написати об*єкт студента який буде виводити ім*я, спеціальнісь, середній бал і кількість пропущених занять
+// 2) написати метод який буде виводити цю інформацію
+// 3) написати три варіанти студентів
+// 4) прикріпити знначення за допомогою call apply bind
+
+// const student = {
+//   name: "",
+//   major: "",
+//   averageGrade: 0,
+//   missedClasses: 0,
+
+//   Info: function () {
+//     console.log(`Ім'я: ${this.name}`);
+//     console.log(`Спеціальність: ${this.major}`);
+//     console.log(`Середній бал: ${this.averageGrade}`);
+//     console.log(`Кількість пропущених занять: ${this.missedClasses}`);
+//   },
+// };
+
+// const student1 = {
+//   name: "Дмитро",
+//   major: "Інформатика",
+//   averageGrade: 4.5,
+//   missedClasses: 2,
+// };
+
+// const student2 = {
+//   name: "Марія",
+//   major: "Математика",
+//   averageGrade: 4.0,
+//   missedClasses: 1,
+// };
+
+// const student3 = {
+//   name: "Олена",
+//   major: "Географія",
+//   averageGrade: 4.2,
+//   missedClasses: 3,
+// };
+
+// const displayStudent1Info = student.Info.bind(student1);
+// displayStudent1Info();
+// const displayStudent2Info = student.Info.bind(student2);
+// displayStudent2Info();
+// const displayStudent3Info = student.Info.bind(student3);
+// displayStudent3Info();
+
+// const infoStudent = {
+//   name: "",
+//   major: "",
+//   averageGrade: 0,
+//   missedClasses: 0,
+
+//   logInfo: function (missedClasses) {
+//     console.group(`info:`);
+//     console.log(`Ім'я: ${this.name}`);
+//     console.log(`Спеціальність: ${this.major}`);
+//     console.log(`Середній бал: ${this.averageGrade}`);
+//     console.log(`Кількість пропущених занять: ${missedClasses}`);
+//     console.groupEnd();
+//   },
+// };
+
+// const student1 = {
+//   name: "Дмитро",
+//   major: "Інформатика",
+//   averageGrade: 4.5,
+//   missedClasses: 2,
+// };
+
+// const student2 = {
+//   name: "Марія",
+//   major: "Математика",
+//   averageGrade: 4.0,
+//   missedClasses: 1,
+// };
+
+// const student3 = {
+//   name: "Олена",
+//   major: "Географія",
+//   averageGrade: 4.2,
+//   missedClasses: 3,
+// };
+
+// infoStudent.logInfo.call(student1, "2");
+// infoStudent.logInfo.call(student2, "1");
+// infoStudent.logInfo.call(student3, "3");
+
+// const infoStudent = {
+//   name: "",
+//   major: "",
+//   averageGrade: 0,
+//   missedClasses: 0,
+
+//   logInfo: function (averageGrade,missedClasses) {
+//     console.group(`students info:`);
+//     console.log(`Ім'я: ${this.name}`);
+//     console.log(`Спеціальність: ${this.major}`);
+//     console.log(`Середній бал: ${averageGrade}`);
+//     console.log(`Кількість пропущених занять: ${missedClasses}`);
+//     console.groupEnd();
+//   },
+// };
+
+//  const student1 = {
+//   name: "Дмитро",
+//   major: "Інформатика",
+//   averageGrade: 4.5,
+//   missedClasses: 2,
+// };
+
+// const student2 = {
+//   name: "Марія",
+//   major: "Математика",
+//   averageGrade: 4.0,
+//   missedClasses: 1,
+// };
+
+// const student3 = {
+//   name: "Олена",
+//   major: "Географія",
+//   averageGrade: 4.2,
+//   missedClasses: 3,
+// };
+
+// infoStudent.logInfo.apply(student1,[4.5, 2])
+// infoStudent.logInfo.apply(student2,[4.0, 1])
+// infoStudent.logInfo.apply(student3,[4.2, 3])
 
 //---------------------------------------------------------------------------------------------//
 
-// -- 2 --
-//Виведіть парні числа від 2 до 10, використовуючи цикл for.
+// --2--
 
-// for (let i = 2; i <= 10; i++) {
-//   if (i % 2 === 0) {
-//     console.log(i);
-//   }
+// Написати дві кнопки і закріпити на них функції
+// при натисканні на кнопку html - має видати коротке визначення що це таке
+// function html() {
+//   console.log("За допомогою HTML ви можете створити свій власний веб-сайт.");
+//   console.log(this);
+// }
+// document.querySelector("#html").onclick = html;
+// // при натисканні на кнопку css - має видати коротке визначення що це таке
+// function css() {
+//   console.log("Каскадні таблиці стилів (CSS)");
+//   console.log(this);
+// }
+// document.querySelector("#css").onclick = css;
+// const button = {
+//   function() {
+//     console.log("визначення: ", this.items);
+//   },
+// };
+// const css = {
+//   items: "Каскадні таблиці стилів,допоможуть Вам прикрасити сторінку",
+// };
+// const html = {
+//   items: "За допомогою HTML ви можете створити свій власний веб-сайт.",
+// };
+
+// document
+//   .querySelector("#css")
+//   .addEventListener("click", button.function.bind(css));
+// document
+//   .querySelector("#html")
+//   .addEventListener("click", button.function.bind(html));
+
+//---------------------------------------------------------------------------------------------//
+
+// --3--
+
+// Написати функцію магазин, яка отримує назву товару, ціну за кг і кількість товару
+// функція має повертати назву товару і вартість
+// перевірити на варіантах:
+// 1) banana 30, 4,5
+// 2) cherry 58, 1,3
+// 3) orange 89. 3,4
+
+// function Shop() {
+//     let totalPrice = 0;
+
+//     return function(product, pricePerKg, quantity) {
+//         let cost = pricePerKg * quantity;
+//         totalPrice += cost;
+//         return product + ": ₴ " + cost;
+//     }
 // }
 
-//---------------------------------------------------------------------------------------------//
+// const shop = Shop();
 
-// -- 3 --
-//Замініть цикл "for" на "while"
-// for (let i = 0; i < 5; i++) {
-// console.lpg( `цифра ${i}!` );
-// }
-
-// let i = 0;
-// while (i < 5) {
-//   console.log(`цифра ${i}!`);
-//   i++;
-// }
-
-//---------------------------------------------------------------------------------------------//
-
-// -- 4 --
-//Напишіть цикл, який пропонує prompt ввести число більше за 100.
-//Якщо відвідувач введе менше число – попросити ввести ще раз, і так далі.
-//Цикл повинен запитувати число доти, доки відвідувач не введе число,
-// більше за 100, або не скасує ввід/введе порожній рядок.
-
-// let number;
-// do {
-//   number = prompt("Будь ласка, введіть число більше за 100:");
-//   if (number === null || number === "") {
-//     break;
-//   }
-//   number = Number(number);
-// } while (number <= 100);
-// if (number > 100) {
-//   alert("Дякуємо! Ви ввели число більше за 100.");
-// } else {
-//   alert("Ви скасували ввід або ввели недопустиме значення.");
-// }
-
-//---------------------------------------------------------------------------------------------//
-
-// -- 5 --
-// Вирахуйте середній вік
-// const girls = [
-//   { age: 23, name: "Оля" },
-//   { age: 29, name: "Аня" },
-//   { age: 10, name: "Юля" },
-//   { age: 20, name: "Катя" },
-// ];
-
-//const ages = girls.map((girl) => girl.age);
-
-//const totalAge = ages.reduce((sum, age) => sum + age, 0);
-//const averageAge = totalAge / girls.length;
-
-//console.log("Середній вік дівчат:", averageAge); //Середній вік дівчат: 20.5
-//---------------------------------------------------------------------------------------------//
+// console.log(shop("Apple", 2, 3)); // Apple: $6
+// console.log(shop("Banana", 1.5, 2)); // Banana: $3
+// console.log(shop("Cherry", 4, 1.5)); // Cherry: $6
+// console.log(shop("pear", 9, 3.5)); // pear: $31.5
